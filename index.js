@@ -19,7 +19,7 @@ const pattern = (key = {}) => {
     const searchPath = "/content/v4/search/published";
 
     const query = [
-        `q=credits.by._id:${encodeURI(authorId)}`,
+        `q=credits.by._id:${encodeURI(authorId)} OR credits.by.slug:${encodeURI(authorId)}`,
         `website=${website}`,
         `size=${feedSize}`,
         `from=${(feedPage - 1) * feedSize}`

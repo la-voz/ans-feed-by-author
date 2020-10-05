@@ -8,7 +8,7 @@ describe("source.resolve function", () => {
         feedPage: 1
     };
 
-    const q = "credits.by._id:authorid";
+    const q = "credits.by._id:authorid OR credits.by.slug:authorid";
 
     it("Checks that source.resolve returns the right pattern from the key", () => {
         const { feedSize } = key;
